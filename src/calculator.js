@@ -18,7 +18,3 @@ function add(num1, num2){
     return num1 + num2;
   }
 }
-
-
-module.exports.substractPositive = substractPositive
-module.exports.add = add;
