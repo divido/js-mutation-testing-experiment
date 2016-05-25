@@ -25,6 +25,9 @@ module.exports = function(grunt) {
 					specs: 'test/test_*.js',
 					mutate: 'src/*.js'
 
+				},
+				files: {
+					'src/calculator.js': 'test/*.js'
 				}
 			}
 		}
