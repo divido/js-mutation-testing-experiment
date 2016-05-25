@@ -7,7 +7,17 @@ module.exports = function(grunt) {
 
 				karma: {
 					configFile: 'karma.conf.js'
-				}
+				},
+
+				reporters: {
+					html: {
+						dir: 'reports/grunt-mutation-testing',
+						successThreshold: 90
+					},
+					console: true
+				},
+
+				logLevel: 'DEBUG'
 			},
 			target: {
 				options:{
