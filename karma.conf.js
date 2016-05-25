@@ -10,13 +10,14 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'dojo'],
 
 
     // list of files / patterns to load in the browser
-    files: [
-      {pattern: 'src/*.js', included: true},
-      {pattern: 'test/*.js', included: true}
+  files: [
+      'bootstrap.js',
+      {pattern: 'src/*.js', included: false},
+      {pattern: 'test/*.js', included: false}
     ],
 
 
@@ -65,6 +66,12 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+	  concurrency: Infinity,
+
+	  plugins: [
+		  'karma-dojo',
+		  'karma-jasmine',
+		  'karma-firefox-launcher'
+	  ]
   })
 }

@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				options:{
-					code: ['src/*.js'],
+					code: ['src/*.js', 'bootstrap.js'],
 					specs: 'test/test_*.js',
 					mutate: 'src/*.js'
 
